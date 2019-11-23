@@ -1,12 +1,13 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
-import { exampleInitialState, reducer } from "./reducers/counter";
+import logger from 'redux-logger';
+import { reducer } from './reducers/counter';
+import { userReducer } from './reducers/user';
 
-export function initializeStore(initialState = exampleInitialState) {
-    return createStore(
-        reducer,
-        initialState,
-        composeWithDevTools(applyMiddleware(thunkMiddleware))
-    );
+const middleware = applyMiddleware(thunkMiddleware, logger);
+const rootReducer = combineReducers({ counter: reducer, user: userReducer });
+
+export function initializeStore() {
+    return createStore(rootReducer, composeWithDevTools(middleware));
 }

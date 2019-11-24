@@ -3,13 +3,13 @@ import { connect } from 'react-redux';
 import Layout from '../components/Layout';
 import Form from '../components/Form';
 
-import './style/index.css'
+import './style/index.css';
 
 const Index: React.FunctionComponent = () => {
     return (
         <Layout>
-           <h1>Login form</h1>
-            <Form/>
+            <h1 className='example'>Login form</h1>
+            <Form />
         </Layout>
     );
 };

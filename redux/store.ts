@@ -8,6 +8,6 @@ import { user } from './reducers/user';
 const middleware = applyMiddleware(thunkMiddleware, logger);
 const rootReducer = combineReducers({ counter, user });
 
-export function initializeStore() {
-    return createStore(rootReducer, composeWithDevTools(middleware));
+export function initializeStore(initState = {}) {
+    return createStore(rootReducer, initState, composeWithDevTools(middleware));
 }

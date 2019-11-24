@@ -5,6 +5,8 @@ import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import { NextComponentType, NextPageContext } from 'next';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 interface Props {
     Component: NextComponentType<NextPageContext, any>;
     reduxStore: Store;

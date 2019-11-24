@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import Layout from '../components/Layout';
 import Form from '../components/Form';
 
+import './style/index.css'
+
 const Index: React.FunctionComponent = () => {
     return (
         <Layout>

@@ -17,11 +17,13 @@
         "redux": "^4.0.4",
         "redux-devtools-extension": "^2.13.8",
         "redux-logger": "^3.0.6",
-        "redux-thunk": "^2.3.0"
+        "redux-thunk": "^2.3.0",
+        "yup": "^0.27.0"
     },
     "license": "ISC",
     "devDependencies": {
         "@types/react": "^16.9.13",
+        "@types/yup": "^0.26.24",
         "prettier": "^1.19.1",
         "typescript": "^3.7.2"
     },

@@ -3,8 +3,10 @@ import React from 'react';
 import withReduxStore from '../lib/with-redux-store';
 import { Provider } from 'react-redux';
 import { Store } from 'redux';
+import { NextComponentType, NextPageContext } from 'next';
 
 interface Props {
+    Component: NextComponentType<NextPageContext, any>;
     reduxStore: Store;
 }
 

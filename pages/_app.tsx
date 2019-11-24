@@ -7,6 +7,8 @@ import withRedux from 'next-redux-wrapper';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { initializeStore } from '../redux/store';
 
+import Layout from '../components/Layout';
+
 interface Props {
     Component: NextComponentType<NextPageContext, any>;
     store: Store;
@@ -28,7 +30,9 @@ class MyApp extends App<Props> {
         const { Component, pageProps, store } = this.props;
         return (
             <Provider store={store}>
-                <Component {...pageProps} />
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
             </Provider>
         );
     }

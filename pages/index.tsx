@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NextPage, NextPageContext } from 'next';
 import { Store } from 'redux';
-import Layout from '../components/Layout';
 import Form from '../components/Form';
 import './style/index.css';
 
@@ -12,10 +11,10 @@ interface Context extends NextPageContext {
 
 const Index: NextPage = () => {
     return (
-        <Layout>
+        <div>
             <h1 className='example'>Login form</h1>
             <Form />
-        </Layout>
+        </div>
     );
 };
 

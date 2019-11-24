@@ -16,7 +16,6 @@ class MyApp extends App<Props> {
     static async getInitialProps({ Component, ctx }) {
         // we can dispatch from here too
         // ctx.store.dispatch({type: 'FOO', payload: 'foo'});
-        console.log(ctx);
 
         const pageProps = Component.getInitialProps
             ? await Component.getInitialProps(ctx)

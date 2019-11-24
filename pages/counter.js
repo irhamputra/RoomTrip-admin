@@ -1,15 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Examples from '../components/examples';
 import Layout from '../components/Layout';
-import Form from '../components/Form';
 
-const Index = () => {
+const Counter = () => {
     return (
         <Layout>
-           <h1>Login form</h1>
-            <Form/>
+            <Examples />
         </Layout>
     );
 };
 
-export default connect()(Index);
+export default connect()(Counter);

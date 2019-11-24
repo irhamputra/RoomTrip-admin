@@ -1,11 +1,17 @@
 import { UserActions, UserState } from '../../types/reducers/user';
 
-export const user = (state: UserState, action: UserActions): UserState => {
+export const user = (state: UserState = {}, action: UserActions): UserState => {
     switch (action.type) {
         case 'LOGIN':
             return action.payload;
         case 'REGISTER':
             return { ...state, register: action.payload };
+        case 'GET_USER':
+            return action.payload;
+        case 'UPDATE_LOGIN':
+            return { ...state, login: action.payload };
+        case 'LOGOUT':
+            return (state = {});
         default:
             return state;
     }

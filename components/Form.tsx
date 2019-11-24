@@ -1,7 +1,9 @@
 import React from 'react';
 import useForm from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import { Login } from '../types/FormData';
 import * as Yup from 'yup';
+import { loginUser, login } from '../redux/actions/user';
 
 const LoginSchema = Yup.object().shape({
     email: Yup.string()
@@ -11,12 +13,20 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Form: React.FC = () => {
+    const dispatch = useDispatch();
+    const dispatchLoginUser = data => dispatch(loginUser(data));
+    const dispatchLogin = () => dispatch(login());
+
     const { register, handleSubmit, errors } = useForm<Login>({
         validationSchema: LoginSchema
     });
-    const onSubmit = data => console.log(data);
 
-    console.log(errors);
+    const onSubmit = data => {
+        dispatchLoginUser(data);
+        if (data) {
+            dispatchLogin();
+        }
+    };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>

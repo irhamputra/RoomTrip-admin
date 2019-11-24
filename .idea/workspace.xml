@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="106bbeb9-5bb0-43b1-b83a-066c12ee85a7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Form.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/examples.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/examples.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/counter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/counter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,46 +30,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/Form.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/next.config.js">
+        <entry file="file://$PROJECT_DIR$/pages/_app.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/counter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="147">
+              <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,16 +67,17 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/redux/actions/User.js" />
         <option value="$PROJECT_DIR$/redux/actions/user.js" />
-        <option value="$PROJECT_DIR$/redux/reducers/user.js" />
-        <option value="$PROJECT_DIR$/redux/reducers/counter.js" />
-        <option value="$PROJECT_DIR$/redux/store.js" />
-        <option value="$PROJECT_DIR$/components/counter.js" />
         <option value="$PROJECT_DIR$/components/Header.js" />
         <option value="$PROJECT_DIR$/components/Layout.js" />
         <option value="$PROJECT_DIR$/pages/counter.js" />
         <option value="$PROJECT_DIR$/pages/index.js" />
         <option value="$PROJECT_DIR$/components/Form.js" />
         <option value="$PROJECT_DIR$/next.config.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/counter.js" />
+        <option value="$PROJECT_DIR$/redux/reducers/user.js" />
+        <option value="$PROJECT_DIR$/redux/store.js" />
+        <option value="$PROJECT_DIR$/components/counter.js" />
+        <option value="$PROJECT_DIR$/pages/_app.tsx" />
       </list>
     </option>
   </component>
@@ -131,6 +111,33 @@
             <path>
               <item name="with-redux-thunk-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="with-redux-thunk-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="with-redux-thunk-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="with-redux-thunk-app" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="with-redux-thunk-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="with-redux-thunk-app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="with-redux-thunk-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="with-redux-thunk-app" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="with-redux-thunk-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="with-redux-thunk-app" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="with-redux-thunk-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="with-redux-thunk-app" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -180,7 +187,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1574544706168</updated>
-      <workItem from="1574544710304" duration="9379000" />
+      <workItem from="1574544710304" duration="10375000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1574546707144</created>
@@ -203,11 +210,18 @@
       <option name="project" value="LOCAL" />
       <updated>1574560148142</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add css module to app">
+      <created>1574602058678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574602058678</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9379000" />
+    <option name="totallyTimeSpent" value="10375000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="811" extended-state="0" />
@@ -221,7 +235,7 @@
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="GraphQL" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32894737" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -242,7 +256,8 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="add firebase, redux-logger, user action and reducer to rootReducer" />
     <MESSAGE value="add react-hook-form and move counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="add react-hook-form and move counter" />
+    <MESSAGE value="add css module to app" />
+    <option name="LAST_COMMIT_MESSAGE" value="add css module to app" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/node_modules/react-redux/es/index.js">
@@ -268,13 +283,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pages/_app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/with-redux-store.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -295,16 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/examples.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/redux-thunk/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -319,85 +317,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/counter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/Header.js">
+    <entry file="file://$PROJECT_DIR$/components/Header.tsx">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/actions/user.js">
+    <entry file="file://$PROJECT_DIR$/components/counter.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        <state relative-caret-position="147">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/counter.js">
+    <entry file="file://$PROJECT_DIR$/components/examples.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="105">
+          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/counter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/reducers/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/redux/store.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/counter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/Form.js">
+    <entry file="file://$PROJECT_DIR$/components/Form.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
           <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
@@ -407,10 +344,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/components/Layout.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/counter.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tsconfig.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-141">
+        <state relative-caret-position="37">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/next-env.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -418,6 +388,58 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/store.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="54" selection-start-line="5" selection-start-column="54" selection-end-line="5" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/reducers/counter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/user.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/redux/actions/counter.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/index.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/_app.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="22" lean-forward="true" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

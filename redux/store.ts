@@ -2,11 +2,11 @@ import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunkMiddleware from 'redux-thunk';
 import logger from 'redux-logger';
-import { reducer } from './reducers/counter';
-import { userReducer } from './reducers/user';
+import { counter } from './reducers/counter';
+import { user } from './reducers/user';
 
 const middleware = applyMiddleware(thunkMiddleware, logger);
-const rootReducer = combineReducers({ counter: reducer, user: userReducer });
+const rootReducer = combineReducers({ counter, user });
 
 export function initializeStore() {
     return createStore(rootReducer, composeWithDevTools(middleware));

@@ -1,6 +1,6 @@
 import { actionTypes } from '../actions/counter';
 
-export const reducer = (state = { count: 0 }, action) => {
+export const counter = (state = { count: 0 }, action) => {
     switch (action.type) {
         case actionTypes.INCREMENT:
             return Object.assign({}, state, {

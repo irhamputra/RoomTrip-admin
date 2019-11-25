@@ -4,7 +4,6 @@ import { NextPage, NextPageContext } from 'next';
 import { Dispatch, Store } from 'redux';
 import { useSelector } from 'react-redux';
 import { useRouter } from 'next/router';
-import Buttons from '../components/Buttons';
 import { parseCookies } from '../lib/parseCookies';
 import { getUserID } from '../redux/actions/user';
 
@@ -45,7 +44,6 @@ const Dashboard: NextPage<Props> = ({ userCookies }) => {
                         Hello{' '}
                         {user.firstName ? user.firstName : user.displayName}
                     </h3>
-                    <Buttons />
                 </div>
             )}
         </div>

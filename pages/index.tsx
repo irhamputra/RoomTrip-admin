@@ -14,7 +14,7 @@ interface Context extends NextPageContext {
 
 const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
     const [loading, setLoading] = useState(false);
-    const [cookies, setCookies] = useState(() =>
+    const [cookies, _] = useState(() =>
         userCookies ? JSON.parse(userCookies) : ''
     );
     const router = useRouter();

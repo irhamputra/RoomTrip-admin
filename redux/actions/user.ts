@@ -65,12 +65,7 @@ export const signInWithGoogle = () => {
                 expires: 7
             });
 
-            const user = await db
-                .collection('admin')
-                .doc(uid)
-                .get();
-
-            dispatch({ type: 'SIGN_IN_WITH_GOOGLE', payload: user.data() });
+            dispatch({ type: 'SIGN_IN_WITH_GOOGLE' });
         } catch (e) {
             console.error(e);
         }

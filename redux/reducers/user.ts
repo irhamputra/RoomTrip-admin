@@ -8,8 +8,6 @@ export const user = (state: UserState = {}, action: UserActions): UserState => {
             return action.payload;
         case 'GET_USER':
             return action.payload;
-        case 'SIGN_IN_WITH_GOOGLE':
-            return action.payload;
         case 'UPDATE_FORM':
             return { ...state, login: action.payload };
         case 'LOGOUT':

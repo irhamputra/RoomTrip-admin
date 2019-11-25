@@ -5,13 +5,13 @@ export const user = (state: UserState = {}, action: UserActions): UserState => {
         case 'LOGIN':
             return action.payload;
         case 'REGISTER':
-            return { ...state, register: action.payload };
-        case 'GET_USER':
             return action.payload;
-        case 'UPDATE_LOGIN':
+        case 'UPDATE_FORM':
             return { ...state, login: action.payload };
         case 'LOGOUT':
             return (state = {});
+        case 'ERROR_NO_ACCOUNT':
+            return { ...state, error: action.payload };
         default:
             return state;
     }

@@ -1,34 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { NextPage, NextPageContext } from 'next';
-import { useRouter } from 'next/router';
 import { Store } from 'redux';
-import Form from '../components/Form';
-import './style/index.css';
 import Buttons from '../components/Buttons';
 import { parseCookies } from '../lib/parseCookies';
+import { useRouter } from 'next/router';
 
 interface Context extends NextPageContext {
-    store: Store;
+    store?: Store;
 }
 
-const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
+interface Props {
+    userCookies: string;
+}
+
+const Dashboard: NextPage<Props> = ({ userCookies }) => {
     const [loading, setLoading] = useState(false);
-    const [cookies, setCookies] = useState(() =>
+    const [cookies, _] = useState(() =>
         userCookies ? JSON.parse(userCookies) : ''
     );
     const router = useRouter();
 
     useEffect(() => {
         setLoading(true);
-        if (cookies.token) {
-            router.replace('/dashboard').then(() => {
+        if (!cookies.token) {
+            router.replace('/').then(() => {
                 setLoading(false);
             });
-        } else {
-            setLoading(false);
         }
-    });
+        setLoading(false);
+    }, []);
 
     return (
         <div>
@@ -36,8 +37,7 @@ const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
                 <h1>Loading...</h1>
             ) : (
                 <div>
-                    <h1 className='example'>Login form</h1>
-                    <Form />
+                    <p>Hello dashboard</p>
                     <Buttons />
                 </div>
             )}
@@ -45,11 +45,11 @@ const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
     );
 };
 
-Index.getInitialProps = async (ctx: Context) => {
+Dashboard.getInitialProps = async (ctx: Context) => {
     const cookies = parseCookies(ctx.req);
     return {
         userCookies: cookies.userCookies
     };
 };
 
-export default connect(state => state)(Index);
+export default connect(state => state)(Dashboard);

@@ -4,7 +4,6 @@ import { NextPage, NextPageContext } from 'next';
 import { useRouter } from 'next/router';
 import { Store } from 'redux';
 import Form from '../components/Form';
-import './style/index.css';
 import Buttons from '../components/Buttons';
 import { parseCookies } from '../lib/parseCookies';
 
@@ -36,7 +35,7 @@ const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
                 <h1>Loading...</h1>
             ) : (
                 <div>
-                    <h1 className='example'>Login form</h1>
+                    <h1>Login form</h1>
                     <Form />
                     <Buttons />
                 </div>

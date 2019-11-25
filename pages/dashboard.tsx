@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { NextPage, NextPageContext } from 'next';
-import { Store } from 'redux';
+import { Dispatch, Store } from 'redux';
+import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import Buttons from '../components/Buttons';
 import { parseCookies } from '../lib/parseCookies';
-import { useRouter } from 'next/router';
+import { getUserID } from '../redux/actions/user';
 
 interface Context extends NextPageContext {
     store?: Store;
@@ -19,6 +21,7 @@ const Dashboard: NextPage<Props> = ({ userCookies }) => {
     const [cookies, _] = useState(() =>
         userCookies ? JSON.parse(userCookies) : ''
     );
+    const user = useSelector((state: any) => state.user);
     const router = useRouter();
 
     useEffect(() => {
@@ -37,7 +40,8 @@ const Dashboard: NextPage<Props> = ({ userCookies }) => {
                 <h1>Loading...</h1>
             ) : (
                 <div>
-                    <p>Hello dashboard</p>
+                    <h1>Dashboard</h1>
+                    <h3>Hello {user.firstName}</h3>
                     <Buttons />
                 </div>
             )}
@@ -47,6 +51,10 @@ const Dashboard: NextPage<Props> = ({ userCookies }) => {
 
 Dashboard.getInitialProps = async (ctx: Context) => {
     const cookies = parseCookies(ctx.req);
+    const id = JSON.parse(cookies.userCookies).id;
+
+    await ctx.store.dispatch<Dispatch | any>(getUserID(id));
+
     return {
         userCookies: cookies.userCookies
     };

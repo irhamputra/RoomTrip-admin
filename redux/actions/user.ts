@@ -9,6 +9,20 @@ export const setValueForm = data => {
     };
 };
 
+export const getUserID = id => {
+    return async (dispatch): Promise<any> => {
+        const res = await db
+            .collection('admin')
+            .doc(id)
+            .get();
+
+        if (res.exists) {
+            console.log(res.data());
+            dispatch({ type: 'LOGIN', payload: res.data() });
+        }
+    };
+};
+
 export const login = () => {
     return async (dispatch, getState): Promise<void> => {
         try {

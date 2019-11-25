@@ -5,8 +5,15 @@ import { Store } from 'redux';
 import { NextComponentType, NextPageContext } from 'next';
 import withRedux from 'next-redux-wrapper';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'font-awesome/css/font-awesome.min.css';
-// import 'simple-line-icons/css/simple-line-icons.css';
+
+/*
+ * prodsedur ini ga akan jalan, remove package, lalu install package di link github
+ * import 'font-awesome/css/font-awesome.min.css';
+ * import 'simple-line-icons/css/simple-line-icons.css';
+ */
+
+// TODO: Check this https://github.com/FortAwesome/react-fontawesome#nextjs
+
 import './style/style.scss';
 import { initializeStore } from '../redux/store';
 
@@ -19,8 +26,7 @@ interface Props {
 
 class MyApp extends App<Props> {
     static async getInitialProps({ Component, ctx }) {
-        // we can dispatch from here too
-        // ctx.store.dispatch({type: 'FOO', payload: 'foo'});
+        console.log(ctx);
 
         const pageProps = Component.getInitialProps
             ? await Component.getInitialProps(ctx)

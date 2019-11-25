@@ -18,5 +18,6 @@ export const FB = !firebase.apps.length
     ? firebase.initializeApp(firebaseConfig)
     : firebase.app();
 
+export const FireBase = firebase;
 export const db = firebase.firestore();
 export const storage = firebase.storage();

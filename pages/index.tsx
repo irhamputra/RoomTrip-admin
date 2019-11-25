@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { NextPage, NextPageContext } from 'next';
 import { useRouter } from 'next/router';
 import { Store } from 'redux';
 import Form from '../components/Form';
 import Buttons from '../components/Buttons';
 import { parseCookies } from '../lib/parseCookies';
+import { signInWithGoogle } from '../redux/actions/user';
 
 interface Context extends NextPageContext {
     store: Store;
@@ -17,6 +18,10 @@ const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
         userCookies ? JSON.parse(userCookies) : ''
     );
     const router = useRouter();
+
+    const dispatch = useDispatch();
+    const dispatchSignInWithGoogle = async () =>
+        await dispatch(signInWithGoogle());
 
     useEffect(() => {
         setLoading(true);
@@ -38,6 +43,18 @@ const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
                     <h1>Login form</h1>
                     <Form />
                     <Buttons />
+                    <button
+                        onClick={() => {
+                            setLoading(true);
+                            dispatchSignInWithGoogle().then(() => {
+                                router.push('/dashboard')
+                                    .then(() => setLoading(false)
+                            )
+                            });
+                        }}
+                    >
+                        Sign in with Google
+                    </button>
                 </div>
             )}
         </div>

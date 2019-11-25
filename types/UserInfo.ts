@@ -10,3 +10,15 @@ export type UserInfo = {
     emailVerified: boolean;
     city: string;
 };
+
+export type UserGoogleInfo = {
+    displayName: string;
+    email: string;
+    phoneNumber: string;
+    photoURL: string;
+    uid: string;
+    creationTime?: string;
+    lastSignInTime?: string;
+    emailVerified: boolean;
+    city: string;
+};

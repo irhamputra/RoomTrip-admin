@@ -7,4 +7,7 @@ export type UserActions =
     | { type: 'LOGOUT' }
     | { type: 'UPDATE_FORM'; payload: object }
     | { type: 'REGISTER'; payload: object }
-    | { type: 'ERROR_NO_ACCOUNT'; payload: object };
+    | { type: 'ERROR_NO_ACCOUNT'; payload: object }
+    | { type: 'SIGN_IN_WITH_GOOGLE'; payload: object }
+    | { type: 'SUCCESS_SIGN_IN' }
+    | { type: 'GET_USER'; payload: object };

@@ -1,6 +1,6 @@
 import * as Cookies from 'js-cookie';
-import { db, FB } from '../../config/firebase';
-import { UserInfo } from '../../types/UserInfo';
+import { db, FB, FireBase } from '../../config/firebase';
+import { UserGoogleInfo, UserInfo } from '../../types/UserInfo';
 
 export const setValueForm = data => {
     return {
@@ -17,8 +17,62 @@ export const getUserID = id => {
             .get();
 
         if (res.exists) {
-            console.log(res.data());
-            dispatch({ type: 'LOGIN', payload: res.data() });
+            dispatch({ type: 'GET_USER', payload: res.data() });
+        }
+    };
+};
+
+export const signInWithGoogle = () => {
+    return async dispatch => {
+        try {
+            let provider = new FireBase.auth.GoogleAuthProvider();
+            const res = await FB.auth().signInWithPopup(provider);
+
+            const {
+                displayName,
+                emailVerified,
+                email,
+                metadata: { lastSignInTime, creationTime },
+                photoURL,
+                phoneNumber,
+                refreshToken,
+                uid
+            } = res.user;
+
+            const newUser: UserGoogleInfo = {
+                displayName,
+                email,
+                emailVerified,
+                lastSignInTime,
+                creationTime,
+                phoneNumber,
+                photoURL,
+                uid,
+                city: null
+            };
+
+            await db
+                .collection('admin')
+                .doc(uid)
+                .set(newUser);
+
+            const userCookies = {
+                id: res.user.uid,
+                token: refreshToken
+            };
+
+            Cookies.set('userCookies', JSON.stringify(userCookies), {
+                expires: 7
+            });
+
+            const user = await db
+                .collection('admin')
+                .doc(uid)
+                .get();
+
+            dispatch({ type: 'SIGN_IN_WITH_GOOGLE', payload: user.data() });
+        } catch (e) {
+            console.error(e);
         }
     };
 };
@@ -41,13 +95,8 @@ export const login = () => {
                     .collection('admin')
                     .doc(uid)
                     .update({
-                        lastTimeSignIn: res.user.metadata.lastSignInTime
+                        lastSignInTime: res.user.metadata.lastSignInTime
                     });
-
-                const user = await db
-                    .collection('admin')
-                    .doc(uid)
-                    .get();
 
                 const userCookies = {
                     id: res.user.uid,
@@ -57,7 +106,7 @@ export const login = () => {
                 Cookies.set('userCookies', JSON.stringify(userCookies), {
                     expires: 7
                 });
-                dispatch({ type: 'LOGIN', payload: user.data() });
+                dispatch({ type: 'SIGN_IN' });
                 return;
             }
         } catch (e) {

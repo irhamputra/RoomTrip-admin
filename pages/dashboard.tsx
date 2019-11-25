@@ -41,7 +41,10 @@ const Dashboard: NextPage<Props> = ({ userCookies }) => {
             ) : (
                 <div>
                     <h1>Dashboard</h1>
-                    <h3>Hello {user.firstName}</h3>
+                    <h3>
+                        Hello{' '}
+                        {user.firstName ? user.firstName : user.displayName}
+                    </h3>
                     <Buttons />
                 </div>
             )}

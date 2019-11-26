@@ -2,6 +2,8 @@ import React from 'react';
 import {
     UncontrolledDropdown, DropdownItem, DropdownToggle, DropdownMenu, NavbarToggler,
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import Buttons from './Buttons';
 
 const Header = () => {
@@ -23,17 +25,16 @@ const Header = () => {
                 </UncontrolledDropdown>
             </ul>
             <ul className="ml-auto navbar-nav">
-            <span className="user-welcome">Hello admin</span>
                 <UncontrolledDropdown className="nav-item" >
-                    <DropdownToggle nav caret>
+                    <DropdownToggle nav>
                         <span className="img-avatar">
-                            <i className="icon-user img-avatar" />
+                            <FontAwesomeIcon icon={faUserCircle} className="img-avatar"/>
+                            {' '}
+                            Hello admin
                         </span>
                     </DropdownToggle>
                     <DropdownMenu right>
-                        <DropdownItem>
-                                <Buttons />
-                        </DropdownItem>
+                        <Buttons />
                     </DropdownMenu>
                 </UncontrolledDropdown>
             </ul>

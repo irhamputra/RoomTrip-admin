@@ -28,7 +28,9 @@ const RegisterSchema = Yup.object().shape({
     email: Yup.string()
         .email()
         .required(),
-    password: Yup.string().required()
+    password: Yup.string()
+        .min(6)
+        .required()
 });
 
 
@@ -40,7 +42,7 @@ const Form: React.FC<{ register?: boolean }> = props => {
     const dispatchLogin = async () => await dispatch(login());
     const dispatchRegister = async () => await dispatch(registerUser());
 
-    const { register, handleSubmit, errors } = useForm<Login>({
+    const { register, handleSubmit, errors,} = useForm<Login>({
         validationSchema: props.register ? RegisterSchema : LoginSchema
     });
 
@@ -48,7 +50,6 @@ const Form: React.FC<{ register?: boolean }> = props => {
         setLoading(true);
         dispatchLoginUser(data);
         if (props.register) {
-            console.log(data);
             dispatchRegister().then(() => {
                 Router.push('/dashboard').then(() => setLoading(false));
             });
@@ -67,64 +68,84 @@ const Form: React.FC<{ register?: boolean }> = props => {
                     <div>
                         <FormGroup row>
                             <Col md="12">
-                                <Input
+                                <input
                                     disabled={loading}
                                     name='firstName'
                                     placeholder='First Name'
                                     type='text'
                                     ref={register}
+                                    className={errors.firstName 
+                                        ? 'form-control text-input error'
+                                        : 'form-control text-input'
+                                    }
                                 />
-                                {errors.firstName && <p>{errors.firstName.message}</p>}
+                                {errors.firstName && <p className="input-feedback mb-0">{errors.firstName.message}</p>}
                             </Col>
                         </FormGroup>
                         <FormGroup row>
                             <Col md="12">
-                                <Input
+                                <input
                                     disabled={loading}
                                     name='lastName'
                                     placeholder='Last Name'
                                     type='text'
                                     ref={register}
+                                    className={errors.lastName
+                                        ? 'form-control text-input error'
+                                        : 'form-control text-input'
+                                    }
                                 />
-                                {errors.lastName && <p>{errors.lastName.message}</p>}
+                                {errors.lastName && <p className="input-feedback mb-0">{errors.lastName.message}</p>}
                             </Col>
                         </FormGroup>
                         <FormGroup row>
                             <Col md="12">
-                                <Input
+                                <input
                                     disabled={loading}
                                     name='city'
                                     placeholder='City'
                                     type='text'
                                     ref={register}
+                                    className={errors.city
+                                        ? 'form-control text-input error'
+                                        : 'form-control text-input'
+                                    }
                                 />
-                                {errors.city && <p>{errors.city.message}</p>}
+                                {errors.city && <p className="input-feedback mb-0">{errors.city.message}</p>}
                             </Col>
                         </FormGroup>
                     </div>
                 ) : null}
                 <FormGroup row>
                     <Col md="12">
-                        <Input
+                        <input
                             disabled={loading}
                             name='email'
                             placeholder='email'
                             type='email'
                             ref={register}
+                            className={errors.email
+                                ? 'form-control text-input error'
+                                : 'form-control text-input'
+                            }
                         />
-                        {errors.email && <p>{errors.email.message}</p>}
+                        {errors.email && <p className="input-feedback mb-0">{errors.email.message}</p>}
                     </Col>
                 </FormGroup>
                 <FormGroup row>
                     <Col md="12">
-                        <Input
+                        <input
                             disabled={loading}
                             name='password'
                             placeholder='password'
                             type='password'
                             ref={register}
+                            className={errors.password
+                                ? 'form-control text-input error'
+                                : 'form-control text-input'
+                            }
                         />
-                        {errors.password && <p>{errors.password.message}</p>}
+                        {errors.password && <p className="input-feedback mb-0">{errors.password.message}</p>}
                     </Col>
                 </FormGroup>
 

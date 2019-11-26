@@ -5,12 +5,13 @@ import { Store } from 'redux';
 import { NextComponentType, NextPageContext } from 'next';
 import withRedux from 'next-redux-wrapper';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import 'font-awesome/css/font-awesome.min.css';
-// import 'simple-line-icons/css/simple-line-icons.css';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import './style/style.scss';
 import { initializeStore } from '../redux/store';
 
 import Layout from '../components/Layout';
+config.autoAddCss = false 
 
 interface Props {
     Component: NextComponentType<NextPageContext, any>;

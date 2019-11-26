@@ -1,6 +1,7 @@
 import * as Cookies from 'js-cookie';
 import { db, FB, FireBase } from '../../config/firebase';
 import { UserGoogleInfo, UserInfo } from '../../types/UserInfo';
+import Router from 'next/router';
 
 export const setValueForm = data => {
     return {
@@ -102,6 +103,7 @@ export const login = () => {
                     expires: 7
                 });
                 dispatch({ type: 'SIGN_IN' });
+                await Router.push('/dashboard');
                 return;
             }
         } catch (e) {
@@ -176,7 +178,10 @@ export const registerUser = () => {
             dispatch({ type: 'REGISTER', payload: getUser.data() });
             return;
         } catch (e) {
-            console.error(e);
+            dispatch({
+                type: 'ERROR_NO_ACCOUNT',
+                payload: e.message
+            });
         }
     };
 };

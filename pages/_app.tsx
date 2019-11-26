@@ -5,9 +5,13 @@ import { Store } from 'redux';
 import { NextComponentType, NextPageContext } from 'next';
 import withRedux from 'next-redux-wrapper';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import './style/style.scss';
 import { initializeStore } from '../redux/store';
 
 import Layout from '../components/Layout';
+config.autoAddCss = false 
 
 interface Props {
     Component: NextComponentType<NextPageContext, any>;
@@ -16,9 +20,6 @@ interface Props {
 
 class MyApp extends App<Props> {
     static async getInitialProps({ Component, ctx }) {
-        // we can dispatch from here too
-        // ctx.store.dispatch({type: 'FOO', payload: 'foo'});
-
         const pageProps = Component.getInitialProps
             ? await Component.getInitialProps(ctx)
             : {};

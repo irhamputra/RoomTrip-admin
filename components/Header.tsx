@@ -6,6 +6,8 @@ import {
     DropdownMenu,
     NavbarToggler
 } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import Buttons from './Buttons';
 
 const Header = () => {
@@ -39,18 +41,17 @@ const Header = () => {
                     </DropdownMenu>
                 </UncontrolledDropdown>
             </ul>
-            <ul className='ml-auto navbar-nav'>
-                <span className='user-welcome'>Hello admin</span>
-                <UncontrolledDropdown className='nav-item'>
-                    <DropdownToggle nav caret>
-                        <span className='img-avatar'>
-                            <i className='icon-user img-avatar' />
+            <ul className="ml-auto navbar-nav">
+                <UncontrolledDropdown className="nav-item" >
+                    <DropdownToggle nav>
+                        <span className="img-avatar">
+                            <FontAwesomeIcon icon={faUserCircle} className="img-avatar"/>
+                            {' '}
+                            Hello admin
                         </span>
                     </DropdownToggle>
                     <DropdownMenu right>
-                        <DropdownItem>
-                            <Buttons />
-                        </DropdownItem>
+                        <Buttons />
                     </DropdownMenu>
                 </UncontrolledDropdown>
             </ul>

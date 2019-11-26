@@ -15,14 +15,14 @@ const Register: NextPage = () => {
     return (
         <div className="app flex-row align-items-center">
             <Container>
-                <Row className="justify-content-center text-center ">
+                <Row className="justify-content-center">
                     <Col md="4">
                         <Card className="p-4">
                             <CardBody>
-                                <h2 className="mb-4">Register</h2>
+                                <h2 className="mb-4 text-center ">Register</h2>
                                 <Form register />
                                 <hr className="mt-3 mb-0" />
-                                <small className="d-block mt-2 mb-1">already have account?</small>
+                                <small className="d-block mt-2 mb-1 text-center ">already have account?</small>
                                 <Buttons/>
                             </CardBody>
                         </Card>

@@ -12,21 +12,22 @@ interface Context extends NextPageContext {
 }
 
 interface Props {
-    userCookies?: string;
+    userCookies?: object;
 }
 
 const Dashboard: NextPage<Props> = ({ userCookies }) => {
     const [loading, setLoading] = useState(false);
-    const [cookies, _] = useState(() =>
-        userCookies ? JSON.parse(userCookies) : null
-    );
+
     const user = useSelector((state: any) => state.user);
     const router = useRouter();
 
     useEffect(() => {
         setLoading(true);
-        if (!cookies) {
-            router.replace('/').then(() => {
+
+        console.log(userCookies);
+
+        if (!userCookies) {
+            router.replace('/').finally(() => {
                 setLoading(false);
             });
         }
@@ -52,14 +53,13 @@ const Dashboard: NextPage<Props> = ({ userCookies }) => {
 
 Dashboard.getInitialProps = async (ctx: Context) => {
     const cookies = parseCookies(ctx.req);
+    if (!cookies) return {};
 
-    if (!cookies.id) return {};
-
-    const id = JSON.parse(cookies.userCookies).id;
+    const { id, token } = JSON.parse(cookies.userCookies);
     await ctx.store.dispatch<Dispatch | any>(getUserID(id));
 
     return {
-        userCookies: cookies.userCookies
+        userCookies: { id, token }
     };
 };
 

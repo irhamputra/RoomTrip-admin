@@ -48,9 +48,9 @@ const Form: React.FC<{ register?: boolean }> = props => {
         setLoading(true);
         dispatchLoginUser(data);
         if (props.register) {
-            dispatchRegister().then(() => setLoading(false));
+            dispatchRegister().finally(() => setLoading(false));
         } else {
-            dispatchLogin().then(() => setLoading(false));
+            dispatchLogin().finally(() => setLoading(false));
         }
     };
 

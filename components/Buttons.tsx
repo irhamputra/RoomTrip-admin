@@ -14,7 +14,7 @@ const Buttons: NextPage = () => {
     let nameButton;
     let target;
     let btnCol = 'primary';
-    let btnCls = 'mt-3'
+    let btnCls = 'mt-3';
 
     if (router.pathname === '/') {
         nameButton = 'Register now!';
@@ -22,14 +22,13 @@ const Buttons: NextPage = () => {
     } else if (router.pathname === '/register') {
         nameButton = 'Login';
         target = '/';
-        btnCol = 'secondary'
-        btnCls = 'btn-block'
-
+        btnCol = 'secondary';
+        btnCls = 'btn-block';
     } else if (router.pathname === '/dashboard') {
         nameButton = 'Logout';
         target = '/';
-        btnCol = 'white'
-        btnCls = 'mr-4'
+        btnCol = 'white';
+        btnCls = 'mr-4';
     }
 
     return (

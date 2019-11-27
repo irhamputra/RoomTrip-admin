@@ -21,11 +21,8 @@ interface Context extends NextPageContext {
     store: Store;
 }
 
-const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
+const Index: NextPage<{ userCookies?: string }> = ({ userCookies }) => {
     const [loading, setLoading] = useState(false);
-    const [cookies, _] = useState(() =>
-        userCookies ? JSON.parse(userCookies) : null
-    );
     const router = useRouter();
 
     const dispatch = useDispatch();
@@ -34,14 +31,11 @@ const Index: NextPage<{ userCookies: string }> = ({ userCookies }) => {
 
     useEffect(() => {
         setLoading(true);
-        // if user has a cookie before
-        if (cookies) {
-            router.push('/dashboard').then(() => setLoading(false));
-        } else {
-            console.log('no cookie');
-            setLoading(false);
+        if (userCookies) {
+            router.replace('/dashboard')
         }
-    }, []);
+        setLoading(false);
+    });
 
     return (
         <div className='app flex-row align-items-center'>

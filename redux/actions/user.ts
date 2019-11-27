@@ -191,9 +191,10 @@ export const logout = () => {
     return (dispatch): Promise<void> => {
         return FB.auth()
             .signOut()
-            .then(() => {
+            .finally(async () => {
                 dispatch({ type: 'LOGOUT' });
                 Cookies.remove('userCookies');
+                await Router.replace('/');
             });
     };
 };

@@ -9,7 +9,7 @@ const Buttons: NextPage = () => {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
     const dispatch = useDispatch();
-    const dispatchLogout = async () => await dispatch(logout());
+    const dispatchLogout = () => dispatch(logout());
 
     let nameButton;
     let target;
@@ -40,9 +40,7 @@ const Buttons: NextPage = () => {
             onClick={() => {
                 if (router.pathname === '/dashboard') {
                     setLoading(true);
-                    dispatchLogout().then(() => {
-                        router.push(target).finally(() => setLoading(false));
-                    });
+                    dispatchLogout();
                 } else {
                     router.push(target);
                 }

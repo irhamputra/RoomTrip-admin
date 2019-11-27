@@ -176,6 +176,7 @@ export const registerUser = () => {
                 expires: 7
             });
             dispatch({ type: 'REGISTER', payload: getUser.data() });
+            await Router.push('/dashboard');
             return;
         } catch (e) {
             dispatch({

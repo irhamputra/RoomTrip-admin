@@ -37,14 +37,14 @@ const Buttons: NextPage = () => {
             className={btnCls}
             active
             disabled={loading}
-            onClick={async () => {
-                setLoading(true);
+            onClick={() => {
                 if (router.pathname === '/dashboard') {
+                    setLoading(true);
                     dispatchLogout().then(() => {
-                        router.push(target).then(() => setLoading(false));
+                        router.push(target).finally(() => setLoading(false));
                     });
                 } else {
-                    router.push(target).then(() => setLoading(false));
+                    router.push(target);
                 }
             }}
         >

@@ -6,8 +6,10 @@ export const user = (state: UserState = {}, action: UserActions): UserState => {
             return action.payload;
         case 'REGISTER':
             return action.payload;
+        case 'GOOGLE_SIGN_IN':
+            return { ...state, googleID: action.payload };
         case 'GET_USER':
-            return action.payload;
+            return { ...state, userID: action.payload };
         case 'UPDATE_FORM':
             return { ...state, login: action.payload };
         case 'LOGOUT':

@@ -8,6 +8,6 @@ export type UserActions =
     | { type: 'UPDATE_FORM'; payload: object }
     | { type: 'REGISTER'; payload: object }
     | { type: 'ERROR_NO_ACCOUNT'; payload: object }
-    | { type: 'SIGN_IN_WITH_GOOGLE'; payload: object }
+    | { type: 'GOOGLE_SIGN_IN'; payload: object }
     | { type: 'SUCCESS_SIGN_IN' }
     | { type: 'GET_USER'; payload: object };

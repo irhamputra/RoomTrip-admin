@@ -9,12 +9,12 @@ const Buttons: NextPage = () => {
     const [loading, setLoading] = useState(false);
     const router = useRouter();
     const dispatch = useDispatch();
-    const dispatchLogout = async () => await dispatch(logout());
+    const dispatchLogout = () => dispatch(logout());
 
     let nameButton;
     let target;
     let btnCol = 'primary';
-    let btnCls = 'mt-3'
+    let btnCls = 'mt-3';
 
     if (router.pathname === '/') {
         nameButton = 'Register now!';
@@ -22,14 +22,13 @@ const Buttons: NextPage = () => {
     } else if (router.pathname === '/register') {
         nameButton = 'Login';
         target = '/';
-        btnCol = 'secondary'
-        btnCls = 'btn-block'
-
+        btnCol = 'secondary';
+        btnCls = 'btn-block';
     } else if (router.pathname === '/dashboard') {
         nameButton = 'Logout';
         target = '/';
-        btnCol = 'white'
-        btnCls = 'mr-4'
+        btnCol = 'white';
+        btnCls = 'mr-4';
     }
 
     return (
@@ -38,14 +37,12 @@ const Buttons: NextPage = () => {
             className={btnCls}
             active
             disabled={loading}
-            onClick={async () => {
-                setLoading(true);
+            onClick={() => {
                 if (router.pathname === '/dashboard') {
-                    dispatchLogout().then(() => {
-                        router.push(target).then(() => setLoading(false));
-                    });
+                    setLoading(true);
+                    dispatchLogout();
                 } else {
-                    router.push(target).then(() => setLoading(false));
+                    router.push(target);
                 }
             }}
         >

@@ -11,7 +11,7 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head />
-                <body className="app header-fixed sidebar-fixed side-menu-fixed aside-menu-hidden">
+                <body>
                     <Main />
                     <NextScript />
                 </body>

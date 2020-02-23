@@ -4,14 +4,17 @@ import { Provider } from 'react-redux';
 import { Store } from 'redux';
 import { NextComponentType, NextPageContext } from 'next';
 import withRedux from 'next-redux-wrapper';
+import * as Cookie from 'js-cookie';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { config } from '@fortawesome/fontawesome-svg-core'
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import './style/style.scss';
+import './style/index.css';
 import { initializeStore } from '../redux/store';
+import { getUserID } from '../redux/actions/user';
 
 import Layout from '../components/Layout';
-config.autoAddCss = false 
+config.autoAddCss = false;
 
 interface Props {
     Component: NextComponentType<NextPageContext, any>;
@@ -25,6 +28,22 @@ class MyApp extends App<Props> {
             : {};
 
         return { pageProps };
+    }
+
+    componentDidMount() {
+        const cookie = Cookie.get('userCookies');
+        if (cookie) {
+            const { id } = JSON.parse(cookie);
+            this.props.store.dispatch<any>(getUserID(id));
+        }
+    }
+
+    componentDidUpdate() {
+        const cookie = Cookie.get('userCookies');
+        if (cookie) {
+            const { id } = JSON.parse(cookie);
+            this.props.store.dispatch<any>(getUserID(id));
+        }
     }
 
     render() {

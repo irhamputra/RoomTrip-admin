@@ -37,8 +37,8 @@ const Form: React.FC<{ register?: boolean }> = props => {
     const user = useSelector((state: any) => state.user);
     const dispatch = useDispatch();
     const dispatchLoginUser = data => dispatch(setValueForm(data));
-    const dispatchLogin = async () => await dispatch(login());
-    const dispatchRegister = async () => await dispatch(registerUser());
+    const dispatchLogin = () => dispatch(login());
+    const dispatchRegister = () => dispatch(registerUser());
 
     const { register, handleSubmit, errors } = useForm<Login>({
         validationSchema: props.register ? RegisterSchema : LoginSchema
@@ -48,9 +48,9 @@ const Form: React.FC<{ register?: boolean }> = props => {
         setLoading(true);
         dispatchLoginUser(data);
         if (props.register) {
-            dispatchRegister().then(() => setLoading(false));
+            dispatchRegister()
         } else {
-            dispatchLogin().then(() => setLoading(false));
+            dispatchLogin()
         }
     };
 

@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="106bbeb9-5bb0-43b1-b83a-066c12ee85a7" name="Default Changelist" comment="protected route login done">
-      <change afterPath="$PROJECT_DIR$/components/Avatar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/SideMenu.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/bills.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/rooms.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/settings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/users.tsx" afterDir="false" />
+    <list default="true" id="106bbeb9-5bb0-43b1-b83a-066c12ee85a7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/components/Box.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Cities.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Copyright.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ListBills.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/SearchBar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/UserLists.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Avatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Avatar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/counter.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/examples.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SideMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/SideMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/counter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/user.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/counter.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/reducers/counter.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582459333640</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="phase 1 done (links, authentication and protected route workaround, avatar)">
+      <created>1582479122464</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582479122464</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,13 +230,14 @@
     <MESSAGE value="remove unused state function" />
     <MESSAGE value="refactoring" />
     <MESSAGE value="protected route login done" />
-    <option name="LAST_COMMIT_MESSAGE" value="protected route login done" />
+    <MESSAGE value="phase 1 done (links, authentication and protected route workaround, avatar)" />
+    <option name="LAST_COMMIT_MESSAGE" value="phase 1 done (links, authentication and protected route workaround, avatar)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="290" y="23" key="CommitChangelistDialog2" timestamp="1582470933259">
+    <state x="290" y="23" key="CommitChangelistDialog2" timestamp="1582479122095">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state x="290" y="23" key="CommitChangelistDialog2/-32.-745.1360.745/0.23.1440.811@0.23.1440.811" timestamp="1582470933259" />
+    <state x="290" y="23" key="CommitChangelistDialog2/-32.-745.1360.745/0.23.1440.811@0.23.1440.811" timestamp="1582479122095" />
     <state x="100" y="123" width="1240" height="611" key="DiffContextDialog" timestamp="1582456297828">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
@@ -240,9 +246,9 @@
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="460" y="61" key="RollbackChangesDialog/-32.-745.1360.745/0.23.1440.811@0.23.1440.811" timestamp="1582455803111" />
-    <state x="320" y="168" key="Vcs.Push.Dialog.v2" timestamp="1582459337381">
+    <state x="320" y="168" key="Vcs.Push.Dialog.v2" timestamp="1582479125205">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state x="320" y="168" key="Vcs.Push.Dialog.v2/-32.-745.1360.745/0.23.1440.811@0.23.1440.811" timestamp="1582459337381" />
+    <state x="320" y="168" key="Vcs.Push.Dialog.v2/-32.-745.1360.745/0.23.1440.811@0.23.1440.811" timestamp="1582479125205" />
   </component>
 </project>

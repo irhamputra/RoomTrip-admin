@@ -1,7 +1,4 @@
 import React from 'react';
-import { Button } from 'reactstrap';
-import { logout } from '../redux/actions/user';
-import { useDispatch } from 'react-redux';
 import Link from 'next/link';
 
 const Links = [
@@ -14,7 +11,7 @@ const Links = [
         path: '/rooms'
     },
     {
-        label: 'Biils',
+        label: 'Bills',
         path: '/bills'
     },
     {
@@ -28,24 +25,24 @@ const Links = [
 ];
 
 const SideMenu: React.FC = () => {
-    const dispatch = useDispatch();
-
-    const onLogOut = () => {
-        console.log('logout');
-        dispatch(logout());
-    };
-
     return (
-        <div>
-            <h1>RoomTrip</h1>
+        <div
+            style={{ position: 'fixed' }}
+            className='pt-3 text-white'
+        >
+            <h1>
+                <strong>
+                    Room<span className='text-orange'>Trip</span>
+                </strong>
+            </h1>
 
-            {Links.map((link,i) => {
+            {Links.map((link, i) => {
                 return (
-                    <div key={i}>
+                    <h5 className='py-2' key={i}>
                         <Link href={link.path}>
-                            <a>{link.label}</a>
+                            <a className='text-white'>{link.label}</a>
                         </Link>
-                    </div>
+                    </h5>
                 );
             })}
         </div>

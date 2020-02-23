@@ -3,7 +3,8 @@ import {
     Dropdown,
     DropdownToggle,
     DropdownMenu,
-    DropdownItem
+    DropdownItem,
+    Col
 } from 'reactstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../redux/actions/user';
@@ -25,7 +26,7 @@ const Avatar: React.FC = () => {
                 style={{ borderRadius: '100%' }}
                 src={user.userID && user.userID.photoURL}
                 alt='photo'
-                width='4%'
+                width='7%'
                 className='mx-3'
             />
             <Dropdown isOpen={dropDownOpen} toggle={() => toggle()}>

@@ -1,15 +1,25 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { Container, Row, Col } from 'reactstrap';
+import Cities from '../components/Cities';
+import SearchBar from '../components/SearchBar';
+import ListBills from '../components/ListBills';
+import UserLists from '../components/UserLists';
 
 const Dashboard: NextPage = () => {
     return (
         <Container fluid={true}>
             <Row>
                 <Col>
-                    <div className='d-flex justify-content-between my-2'>
-                        <h2>Dashboard</h2>
-                    </div>
+                    <Cities />
+                    <Row>
+                        <Col>
+                            <ListBills />
+                        </Col>
+                        <Col>
+                            <UserLists />
+                        </Col>
+                    </Row>
                 </Col>
             </Row>
         </Container>

@@ -1,18 +1,30 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Meta from './Meta';
-import Header from './Header'
+import { Container, Row, Col } from 'reactstrap';
+import SideMenu from './SideMenu';
+import { useRouter } from 'next/router';
+import Avatar from './Avatar';
 
 const Layout = props => {
     const router = useRouter();
-
     return (
-        <div>
+        <div className="py-2">
             <Meta />
-            { router.pathname === '/' || router.pathname === '/register'
-            ? '' : <Header /> 
-            }
-            {props.children}
+            <Container fluid={true}>
+                <Row>
+                    {router.pathname !== '/' && (
+                        <>
+                            <Col xs={2}>
+                                <SideMenu />
+                            </Col>
+                        </>
+                    )}
+                    <Col>
+                        {router.pathname !== '/' && <Avatar />}
+                        {props.children}
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 };

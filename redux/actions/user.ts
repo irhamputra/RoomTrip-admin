@@ -3,15 +3,8 @@ import { db, FB, FireBase } from '../../config/firebase';
 import { UserGoogleInfo } from '../../types/UserInfo';
 import Router from 'next/router';
 
-export const setValueForm = data => {
-    return {
-        type: 'UPDATE_FORM',
-        payload: data
-    };
-};
-
 export const getUserID = id => {
-    return async (dispatch): Promise<any> => {
+    return async (dispatch: any): Promise<any> => {
         const res = await db
             .collection('admin')
             .doc(id)

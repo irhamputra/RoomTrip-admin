@@ -28,6 +28,8 @@ const Index: NextPage = () => {
             setLoading(true);
             router.push('/dashboard').finally(() => setLoading(false));
         }
+
+        return () => false;
     }, []);
 
     if (loading) return <h1>Loading....</h1>;
@@ -84,4 +86,4 @@ const Index: NextPage = () => {
     );
 };
 
-export default Index
+export default Index;

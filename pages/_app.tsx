@@ -8,8 +8,6 @@ import * as Cookie from 'js-cookie';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import './style/style.scss';
-import './style/index.css';
 import { initializeStore } from '../redux/store';
 import { getUserID } from '../redux/actions/user';
 

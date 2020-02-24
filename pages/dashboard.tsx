@@ -2,7 +2,6 @@ import React from 'react';
 import { NextPage } from 'next';
 import { Container, Row, Col } from 'reactstrap';
 import Cities from '../components/Cities';
-import SearchBar from '../components/SearchBar';
 import ListBills from '../components/ListBills';
 import UserLists from '../components/UserLists';
 
@@ -12,7 +11,7 @@ const Dashboard: NextPage = () => {
             <Row>
                 <Col>
                     <Cities />
-                    <Row>
+                    <Row className="my-5">
                         <Col>
                             <ListBills />
                         </Col>

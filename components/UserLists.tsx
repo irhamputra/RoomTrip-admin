@@ -6,7 +6,7 @@ import { faUsers } from '@fortawesome/free-solid-svg-icons';
 const UserLists: React.FC = () => {
     return (
         <>
-            <div className='d-flex align-items-center justify-content-between mb-2'>
+            <div className='d-flex align-items-center justify-content-between mb-3'>
                 <h4>User lists</h4>
 
                 <Button outline color='dark'>

@@ -21,10 +21,13 @@ const Layout = props => {
                             </Col>
                         </>
                     )}
-                    <Col className='pt-3'>
+                    <Col
+                        className='pt-3'
+                        style={{ backgroundColor: '#f7f7f7' }}
+                    >
                         {router.pathname !== '/' && (
                             <Col>
-                                <Row className="align-items-center">
+                                <Row className='align-items-center'>
                                     <Col>
                                         <SearchBar />
                                     </Col>

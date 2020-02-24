@@ -54,7 +54,7 @@ const DATA = [
 const ListBills: React.FC = () => {
     return (
         <div>
-            <div className='d-flex justify-content-between mb-2'>
+            <div className='d-flex justify-content-between mb-3'>
                 <h4>List all Payments</h4>
                 <Button outline color='dark'>
                     <FontAwesomeIcon icon={faMoneyCheck} /> See all payments

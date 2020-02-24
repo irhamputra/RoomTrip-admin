@@ -15,7 +15,7 @@ const SearchBar: React.FC = () => {
             <form className='w-100' onSubmit={handleSubmit(onSubmit)}>
                 <div className='form-group m-0'>
                     <input
-                        className='form-control form-control-lg'
+                        className='form-control'
                         type='text'
                         name='city'
                         ref={register}

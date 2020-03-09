@@ -4,8 +4,7 @@
     "scripts": {
         "dev": "next",
         "build": "next build",
-        "start": "next start",
-        "test": "vows --spec"
+        "start": "next start"
     },
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.25",
